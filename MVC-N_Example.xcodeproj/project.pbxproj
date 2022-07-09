@@ -13,6 +13,9 @@
 		528231F0287976AF007B01D4 /* Comments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528231EE287976AF007B01D4 /* Comments.storyboard */; };
 		528231F2287976B4007B01D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 528231F1287976B4007B01D4 /* Assets.xcassets */; };
 		528231F5287976B4007B01D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528231F3287976B4007B01D4 /* LaunchScreen.storyboard */; };
+		5282320628797F94007B01D4 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5282320528797F94007B01D4 /* CommentCell.swift */; };
+		528232082879816E007B01D4 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528232072879816E007B01D4 /* Comment.swift */; };
+		5282320B2879856B007B01D4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5282320A2879856B007B01D4 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		528231F1287976B4007B01D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		528231F4287976B4007B01D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		528231F6287976B4007B01D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5282320528797F94007B01D4 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		528232072879816E007B01D4 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		5282320A2879856B007B01D4 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,7 @@
 				528231FC287976F0007B01D4 /* Model */,
 				528231FD287976F7007B01D4 /* View */,
 				528231FE287976FC007B01D4 /* Controller */,
+				5282320928798549007B01D4 /* NetworkService */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -119,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				528231EE287976AF007B01D4 /* Comments.storyboard */,
+				5282320528797F94007B01D4 /* CommentCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -126,6 +134,7 @@
 		52823203287977D5007B01D4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				528232072879816E007B01D4 /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -137,6 +146,14 @@
 				528231F6287976B4007B01D4 /* Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		5282320928798549007B01D4 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				5282320A2879856B007B01D4 /* NetworkService.swift */,
+			);
+			path = NetworkService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,9 +227,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				528232082879816E007B01D4 /* Comment.swift in Sources */,
 				528231ED287976AF007B01D4 /* CommentsViewController.swift in Sources */,
 				528231E9287976AF007B01D4 /* AppDelegate.swift in Sources */,
 				528231EB287976AF007B01D4 /* SceneDelegate.swift in Sources */,
+				5282320B2879856B007B01D4 /* NetworkService.swift in Sources */,
+				5282320628797F94007B01D4 /* CommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
