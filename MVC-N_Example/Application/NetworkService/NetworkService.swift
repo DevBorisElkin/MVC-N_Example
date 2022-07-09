@@ -24,7 +24,10 @@ class NetworkService{
                 return
             }
             print(json)
-            completion(json)
+            
+            DispatchQueue.main.async {
+                completion(json)
+            }
         }.resume()
     }
 }

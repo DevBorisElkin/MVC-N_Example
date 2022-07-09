@@ -14,7 +14,10 @@ class CommentNetworkService{
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts/1/comments") else {print("Couldn't create URL"); return}
     
         NetworkService.shared.getData(url: url) { json in
+            var commentResponse = try? GetCommentResponse(json: json)
+            guard let commentResponse = commentResponse else { return }
             
+            completion(commentResponse)
         }
     }
 }

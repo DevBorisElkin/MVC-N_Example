@@ -11,14 +11,17 @@ class CommentsViewController: UIViewController {
 
     @IBOutlet weak var tableView : UITableView!
 
+    var comments = [Comment]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         print("CommentsViewController")
         
-        NetworkService.shared.getData(url: URL(string: "https://jsonplaceholder.typicode.com/posts/1/comments")!, completion: {
-            (value) in
-        })
+        CommentNetworkService.getComments { response in
+            self.comments = response.comments
+            self.tableView.reloadData()
+        }
     }
 }
 
@@ -28,12 +31,13 @@ extension CommentsViewController : UITableViewDelegate{
 
 extension CommentsViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CommentCell
+        cell.configure(with: comments[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return comments.count
     }
     
     
