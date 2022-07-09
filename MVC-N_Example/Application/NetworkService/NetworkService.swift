@@ -25,6 +25,7 @@ class NetworkService{
             }
             print(json)
             
+            // Асинхронно выполнить вот этот блок кода в главном потоке (асинхронно - без ожидания завершения этого блока)
             DispatchQueue.main.async {
                 completion(json)
             }

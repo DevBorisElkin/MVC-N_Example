@@ -1,12 +1,3 @@
-//
-//  Comment.swift
-//  MVC-N_Example
-//
-//  Created by test on 09.07.2022.
-//
-// https://jsonplaceholder.typicode.com/posts/1/comments
-
-
 import Foundation
 
 struct Comment : Codable{
