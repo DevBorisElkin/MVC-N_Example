@@ -16,6 +16,8 @@
 		5282320628797F94007B01D4 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5282320528797F94007B01D4 /* CommentCell.swift */; };
 		528232082879816E007B01D4 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528232072879816E007B01D4 /* Comment.swift */; };
 		5282320B2879856B007B01D4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5282320A2879856B007B01D4 /* NetworkService.swift */; };
+		5282320E28799657007B01D4 /* CommentNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5282320D28799657007B01D4 /* CommentNetworkService.swift */; };
+		52823210287997D2007B01D4 /* GetCommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5282320F287997D2007B01D4 /* GetCommentResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		5282320528797F94007B01D4 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		528232072879816E007B01D4 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		5282320A2879856B007B01D4 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		5282320D28799657007B01D4 /* CommentNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentNetworkService.swift; sourceTree = "<group>"; };
+		5282320F287997D2007B01D4 /* GetCommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCommentResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 				52823203287977D5007B01D4 /* Model */,
 				52823202287977D0007B01D4 /* View */,
 				52823201287977C9007B01D4 /* Controller */,
+				5282320C287995EF007B01D4 /* CommentNetworkService */,
 			);
 			path = Comments;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				528232072879816E007B01D4 /* Comment.swift */,
+				5282320F287997D2007B01D4 /* GetCommentResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,6 +160,14 @@
 				5282320A2879856B007B01D4 /* NetworkService.swift */,
 			);
 			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		5282320C287995EF007B01D4 /* CommentNetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				5282320D28799657007B01D4 /* CommentNetworkService.swift */,
+			);
+			path = CommentNetworkService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,7 +246,9 @@
 				528231E9287976AF007B01D4 /* AppDelegate.swift in Sources */,
 				528231EB287976AF007B01D4 /* SceneDelegate.swift in Sources */,
 				5282320B2879856B007B01D4 /* NetworkService.swift in Sources */,
+				52823210287997D2007B01D4 /* GetCommentResponse.swift in Sources */,
 				5282320628797F94007B01D4 /* CommentCell.swift in Sources */,
+				5282320E28799657007B01D4 /* CommentNetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,37 +18,13 @@ class NetworkService{
         session.dataTask(with: url) { data, response, error in
             guard let data = data else{ return }
             
-//            do{
-//                let json = try JSONSerialization.jsonObject(with: data, options: [])
-//            }catch{
-//                print(error)
-//            }
             var json = try? JSONSerialization.jsonObject(with: data, options: [])
             guard let json = json else{
                 print("Error decoding")
                 return
             }
             print(json)
-        }
-    }
-    
-    public func getDataTmp(url: URL, completion: @escaping (Any) -> ()){
-        let session = URLSession.shared
-        
-        session.dataTask(with: url) { data, response, error in
-            guard let data = data else{ print("No Data"); return }
-            
-//            do{
-//                let json = try JSONSerialization.jsonObject(with: data, options: [])
-//            }catch{
-//                print(error)
-//            }
-            var json = try? JSONSerialization.jsonObject(with: data, options: [])
-            guard let json = json else{
-                print("Error decoding")
-                return
-            }
-            print(json)
+            completion(json)
         }.resume()
     }
 }

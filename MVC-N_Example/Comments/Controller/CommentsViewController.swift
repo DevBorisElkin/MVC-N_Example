@@ -16,7 +16,7 @@ class CommentsViewController: UIViewController {
         
         print("CommentsViewController")
         
-        NetworkService.shared.getDataTmp(url: URL(string: "https://jsonplaceholder.typicode.com/posts/1/comments")!, completion: {
+        NetworkService.shared.getData(url: URL(string: "https://jsonplaceholder.typicode.com/posts/1/comments")!, completion: {
             (value) in
         })
     }
